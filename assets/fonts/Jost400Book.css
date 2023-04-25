@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Jost400Book';
+    src: url('../fonts/Jost400Book.eot');
+    src: url('../fonts/Jost400Book.eot') format('embedded-opentype'),
+         url('../fonts/Jost400Book.woff2') format('woff2'),
+         url('../fonts/Jost400Book.woff') format('woff'),
+         url('../fonts/Jost400Book.ttf') format('truetype'),
+         url('../fonts/Jost400Book.svg#Jost400Book') format('svg');
+}

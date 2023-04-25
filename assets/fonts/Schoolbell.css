@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Schoolbell';
+    src: url('../fonts/Schoolbell.eot');
+    src: url('../fonts/Schoolbell.eot') format('embedded-opentype'),
+         url('../fonts/Schoolbell.woff2') format('woff2'),
+         url('../fonts/Schoolbell.woff') format('woff'),
+         url('../fonts/Schoolbell.ttf') format('truetype'),
+         url('../fonts/Schoolbell.svg#Schoolbell') format('svg');
+}

@@ -1,0 +1,541 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+*{ box-sizing:border-box; }
+
+
+@font-face {
+    font-family: 'Jost400Book';
+    src: url('../fonts/Jost400Book.eot');
+    src: url('../fonts/Jost400Book.eot') format('embedded-opentype'),
+         url('../fonts/Jost400Book.woff2') format('woff2'),
+         url('../fonts/Jost400Book.woff') format('woff'),
+         url('../fonts/Jost400Book.ttf') format('truetype'),
+         url('../fonts/Jost400Book.svg#Jost400Book') format('svg');
+}
+
+@font-face {
+    font-family: 'Schoolbell';
+    src: url('../fonts/Schoolbell.eot');
+    src: url('../fonts/Schoolbell.eot') format('embedded-opentype'),
+         url('../fonts/Schoolbell.woff2') format('woff2'),
+         url('../fonts/Schoolbell.woff') format('woff'),
+         url('../fonts/Schoolbell.ttf') format('truetype'),
+         url('../fonts/Schoolbell.svg#Schoolbell') format('svg');
+}
+
+@font-face {
+    font-family: 'Quicksand_Light';
+    src: url('../fonts/Quicksand_Light.eot');
+    src: url('../fonts/Quicksand_Light.eot') format('embedded-opentype'),
+         url('../fonts/Quicksand_Light.woff2') format('woff2'),
+         url('../fonts/Quicksand_Light.woff') format('woff'),
+         url('../fonts/Quicksand_Light.ttf') format('truetype'),
+         url('../fonts/Quicksand_Light.svg#Quicksand_Light') format('svg');
+}
+
+@font-face {
+    font-family: 'Quicksand_Book';
+    src: url('../fonts/Quicksand_Book.eot');
+    src: url('../fonts/Quicksand_Book.eot') format('embedded-opentype'),
+         url('../fonts/Quicksand_Book.woff2') format('woff2'),
+         url('../fonts/Quicksand_Book.woff') format('woff'),
+         url('../fonts/Quicksand_Book.ttf') format('truetype'),
+         url('../fonts/Quicksand_Book.svg#Quicksand_Book') format('svg');
+}
+
+@font-face {
+    font-family: 'Quicksand_Bold';
+    src: url('../fonts/Quicksand_Bold.eot');
+    src: url('../fonts/Quicksand_Bold.eot') format('embedded-opentype'),
+         url('../fonts/Quicksand_Bold.woff2') format('woff2'),
+         url('../fonts/Quicksand_Bold.woff') format('woff'),
+         url('../fonts/Quicksand_Bold.ttf') format('truetype'),
+         url('../fonts/Quicksand_Bold.svg#Quicksand_Bold') format('svg');
+}
+
+.no_margin{margin-right: 0px;}
+.container{max-width: 1415px; width:100%; margin: 0 auto;}
+
+.up_all{display: flex; justify-content: space-between;}
+.heder_up{background: #2c296d; width: 100%; border-top: 1px solid #8280a8; padding: 12px 0;}
+.up_heading h2{color: #fff; font-family: ; font-size: 13px; line-height: normal;}
+.up_heading h2 span{color: #fbb520; font-family: 'Jost400Book'; font-size: 13px; line-height: normal;}
+
+.menu{display: flex;}
+.menu ul{}
+.menu ul li{list-style: none; display: inline-block; vertical-align: top; padding-right: 26px;}
+.menu ul li a{color: #fff; font-family: 'Jost400Book'; font-size: 13px; line-height: normal; display: block; text-decoration: none;}
+.menu ul li a:hover{color: #96ae00;}
+.menu ul li:last-child{padding-right: 13px; border-right: 1px solid #8280a8;}
+
+.menu_all{display: flex;}
+.english {padding-left: 19px;}
+.english ul{}
+.english ul li{list-style: none; position: relative; display: inline-block; vertical-align: top; padding-right: 32px; z-index: 2;}
+.english ul li a{color: #fff; font-family: 'Jost400Book'; font-size: 16px; line-height: normal; text-decoration: none; } 
+.english ul li:last-child{padding-right: 0;}
+.english  ul ul{position: absolute; top: 100%; left: -2%; display: none; background: #fff; width: 120px; height: 198px; border-radius: 0px 0px 15px 15px;
+box-shadow: 0 0 11px #0000003d rgba(0, 0, 0, 0.24);}
+.english  ul li li{list-style: none; display: block;  padding-right: 0px;}
+.english  ul li li a{color:#000; font-family: 'Jost400Book'; font-size: 14px; line-height: 12px; text-decoration: none; display: block; 
+padding: 10px 10px;}
+.english  ul li li a:hover{color:#96ae00;}
+.english  ul li:hover ul{display: block;}
+
+
+
+
+.header_bottom{background: #fff; max-width: 100%; border-bottom: 1px solid #8280a8;}
+.bottom_all{display: flex; justify-content: space-between; align-items: center;}
+.navigation{display: flex;}
+.navigation {padding-left: 19px;}
+.navigation ul{}
+.navigation ul li{list-style: none; position: relative; display: inline-block; vertical-align: top; padding-right: 32px;}
+.navigation ul li a{color: #000; font-family: 'Jost400Book'; font-size: 16px; line-height: normal; text-decoration: none; display: block; padding: 25px 0;}
+.navigation ul li a:hover{color: #96ae00;} 
+.navigation ul li:last-child{padding-right: 0;}
+.navigation  ul ul{position: absolute; top: 100%; left: -2%; display: none; background: #fff; width: 120px; height: 198px; border-radius: 0px 0px 15px 15px;
+box-shadow: 0 0 11px #0000003d rgba(0, 0, 0, 0.24); border-top: 2px solid #05b705;}
+.navigation  ul li li{list-style: none; display: block; z-index: 1; padding-right: 0px;}
+.navigation  ul li li a{color:#000; font-family: 'Jost400Book'; font-size: 14px; line-height: 12px; text-decoration: none; display: block; 
+padding: 10px 10px;}
+.navigation  ul li li a:hover{color:#96ae00;}
+.navigation  ul li:hover ul{display: block;}
+
+.icon_holder{display: flex; position: relative; padding-top: 5px; cursor: pointer;}
+.icon1{background: #f5f2ff; width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;}
+.icon1 img{padding: 13px;}
+.icon2{background: #fff3ec; width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;}
+.icon2 img{padding: 11px;}
+.icon3{background: #ecfbff; width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;}
+.icon3 img{padding: 13px;}
+.icon4{background: #feefd0; width: 40px; height: 40px; border-radius: 50%; }
+.icon4 img{padding: 13px;}
+.notification{position: absolute; bottom: 26%; left: 85%;}
+
+.box_holder{display: flex; justify-content: space-between; margin: 0 -10px;}
+.food_offers{padding-top: 76px; background: #f2f1f6; padding-bottom: 26px;}
+.food_headings{text-align: center;}
+.food_headings h2{color: #aea809; font-family: 'Schoolbell'; font-size: 18px; line-height: normal; padding-bottom: 25px;}
+.food_headings h3{color: #15345d; font-family:  'Quicksand_Book'; font-size: 30px; line-height: normal; 
+    padding-bottom: 11px;}
+.food_headings p{color: #615669; font-family: 'Jost400Book'; font-size: 15px; line-height: normal; padding-bottom: 43px;}
+
+.food_box{background: #fff; width: 16.66%; position: relative; border-radius: 15px; margin: 0 10px;}
+.box{display: flex;}
+.food_pic{position: relative; text-align: center;}
+.food_pic img{border-radius: 10px 10px 10px 0;}
+.box{ position: absolute; top: 10%; left: 5%;}
+.box1{background: #0cb9d1; width: 38px; height: 20px; margin-right: 4px;}
+.box1 h2{color: #fff; font-family: 'Jost400Book'; font-size: 12px; padding: 3px 9px;}
+.box2{background: #f0cfd1; width: 38px; height: 20px;}
+.box2 h2{color: #de2951; font-family: 'Jost400Book'; font-size: 12px; padding: 3px 9px;}
+.food_details{width: 100%; background: #f7f7f9; border-radius: 15px; padding: 11px 14px 18px 14px; margin: 1px;}
+.details_headings h2{color: #89888d; font-family: 'Jost400Book'; font-size: 13px; line-height: normal; padding-bottom: 5px;}
+.details_headings h3{color: #34325a; font-family: 'Jost400Book'; font-size: 16px; line-height: normal; padding-bottom: 6px;}
+.details_headings img{padding-bottom: 5px;}
+.price{display: flex;}
+.price h2{color: #cb3e66; font-family: 'Jost400Book'; font-size: 18px; line-height: normal; padding-right: 3px;}
+.price h3{color: #524b61; font-family: 'Jost400Book'; font-size: 18px; line-height: normal; padding-right: 3px; text-decoration: line-through;}
+.hover_icons{position: absolute; left: 74%; top: 21%; display: none;}
+.hover_icon1{width: 30px; height: 30px; background: #fff; border-radius: 50%; border: 2px solid #cdcdcd; margin-bottom: 4px;}
+.hover_icon1 img{padding: 7px 6px; display: block;}
+.hover_icon1:hover{background: #587e0c;}
+.food_pic:hover .hover_icons{display: block;}
+.hover_box{border-radius: 0 0 15px 15px; background: #f7f7f9; padding: 9px 24px; border: 1px solid #fff; position: absolute; bottom: -49%; left: 0;
+display: none; z-index: 1; width: 100%; border-top: none;}
+.hover_box_details a{color: #fff; background: #8ab200; font-family: 'Jost400Book'; font-size: 14px; padding: 11px 37px; border-radius: 35px; display: inline-block;
+text-decoration: none; text-transform: uppercase;}
+.hover_box_details a:hover{background: #7ea103;}
+.bottle_all{padding-top: 15px;}
+.bottle_all ul {}
+.bottle_all ul li{ padding-bottom: 8px; list-style: disc;}
+.bottle_all ul li a{ color: #79819c; font-family: 'Jost400Book'; font-size: 15px; text-decoration: none; display: block;}
+.bottle_all ul li:last-child{padding-bottom: 25px;}
+.food_box:hover .hover_box{display: block;}
+
+
+
+
+
+.product_section{background: #f2f2f6; max-width: 100%; padding-top: 98px; padding-bottom: 64px;}
+.product_box{width: 12.5%; background: #fff; border-radius: 15px; padding-top: 29px; margin: 0 10px;}
+.product_details{text-align: center;}
+.product_pic{position: relative; text-align: center;}
+.product_pic img{width: 80px; height: 80px; border-radius: 50%; margin-bottom: 20px;}
+.product_details h2{color: #2d2a77; font-family: 'Jost400Book'; font-size: 15px; line-height: normal; padding-bottom: 8px; cursor: pointer;}
+.product_details h2:hover{color: #8b9509;}
+.product_details h3{color: #2d2a77; font-family: 'Jost400Book'; font-size: 13px; line-height: normal; padding-bottom: 28px; cursor: pointer;}
+.product_details h3:hover{color: #8b9509;}
+.over{position: absolute;  top: 0; left: 0; width: 100%;}
+.over h2{color: #fff; font-size: 80px; width: 80px; height: 80px; border-radius: 50%; background: rgba(0, 6, 19, 0.48); display: none; cursor: pointer;}
+.product_pic:hover .over{display: block;}
+.product_holder{display: flex; justify-content: space-between; margin: 0 -10px;}
+
+
+
+
+.bottle_banner{background: #f2f2f6; padding-top: 75px; max-width: 100%;}
+.bottle_all{display: flex; justify-content: space-between; position: relative;}
+.bottle_details{width: 36.18%;}
+.bottle_heading h2{color: #96ae00; font-family: 'Schoolbell'; font-size: 18px; line-height: normal; padding-bottom: 12px; }
+.bottle_heading h3{color: #2d2a6e; font-family: 'Quicksand_Book'; font-size: 40px; line-height: normal; padding-bottom: 22px;}
+.bottle_heading h3 span{color: #96ae00 ; font-family: 'Quicksand_Book'; font-size: 40px; line-height: normal;}
+.bottle_heading p{color: #5f75a1; font-family: 'Jost400Book'; font-size: 16px; line-height: normal; padding-bottom: 32px;}
+.fruit_details{width: 47.5%;}
+.fruit_deatils_holder {display: flex; justify-content: space-between;}
+.fresh_fruits h2{color: #2d2a6e; font-family: 'Jost400Book'; font-size: 14px; line-height: normal; padding-bottom: 8px; border-bottom: 2px dashed #c2c2d3;}
+.fresh_fruits h3{color: #4d5574; font-family: 'Jost400Book'; font-size: 16px; line-height: normal; padding-top: 8px; padding-bottom: 27px;}
+.fresh_fruits h4{color: #2d2a6e; font-family: 'Jost400Book'; font-size: 16px; line-height: normal; padding-bottom: 8px; border-bottom: 2px dashed #c2c2d3;}
+.fresh_fruits h5{color: #4d5574; font-family: 'Jost400Book'; font-size: 14px; line-height: normal; padding-bottom: 45px; padding-top: 8px;}
+.cart a{color: #fff; background: #2d2a6e; font-family: 'Jost400Book'; font-size: 14px; line-height: normal; padding: 16px 52px; text-decoration: none;
+border-radius: 35px; display: inline-block; text-transform: uppercase;}
+.cart a:hover{background: #788b02;}
+.cart1 a{color: #fff; background: #96ae00; font-family: 'Jost400Book'; font-size: 14px; line-height: normal; padding: 16px 52px; text-decoration: none;
+border-radius: 35px; display: inline-block; text-transform: uppercase;}
+.cart1 a:hover{background: #788b02;}
+.leaf1{position: absolute; top: 0; left: 0;}
+.leaf2{position: absolute; top: 12%; left: 32%;}
+.leaf3{position: absolute; top: -5%; /*left: 92%;*/ right: -7%;}
+.bottle_pic img{max-width: 100%;}
+
+
+
+
+.add_banner{background: #f2f2f6; padding-top: 15px; max-width: 100%; padding-bottom: 88px;}
+.banner_holder{display: flex; justify-content: space-between; margin: 0 -15px;}
+.banner_1{width: 33.33%; margin: 0 15px;}
+.banner_2{width: 33.33%; margin: 0 15px;}
+.banner_3{width: 33.33%; margin: 0 15px;}
+.banner_pic img{width: 100%;}
+.banner_all{position: relative;}
+.banner_deatils_1{position: absolute; top: 30px; left: 35px;}
+.banner_deatils_2{position: absolute; top: 30px; left: 35px;}
+.banner_deatils_3{position: absolute; top: 30px; left: 35px;}
+.banner_headings_1{padding-bottom: 10px;}
+.banner_headings_1 a{color: #f8d603; font-family: 'Jost400Book'; font-size: 14px; line-height: normal; text-decoration: none;
+display: inline-block;}
+.banner_headings_2 a{color: #fff; font-family: 'Quicksand_Book'; font-size: 24px; line-height: normal; text-decoration: none;
+display: inline-block;} 
+.banner_headings_2 {padding-bottom: 35px;}
+.banner_headings_3 a{color: #fff; font-family: 'Jost400Book'; font-size: 16px; line-height: normal; text-decoration: none;
+display: inline-block;} 
+.banner_headings_3 {padding-bottom: 24px;}
+
+
+
+
+.green_container{max-width: 1208px; width: 100%; margin: 0 auto;}
+.green_banner{background: url(../images/green_banner.png); background-repeat: no-repeat; background-position: center; 
+background-size: cover; width: 100%; padding-top: 100px; padding-bottom: 122px; position: relative; margin-top: -24px;}
+.green_holder{width: 37.79%; text-align: left;}
+.green_headings h2{color: #fff; font-family: 'Schoolbell'; font-size: 18px; line-height: normal;padding-bottom: 24px;}
+.green_headings h3{color: #fff; font-family: 'Quicksand_Book'; font-size: 40px; line-height: normal;padding-bottom: 24px;}
+.green_headings p{color: #fff; font-family: 'Jost400Book'; font-size: 14px; line-height: normal;padding-bottom: 38px;}
+.countdown_heading h2{color: #fff; font-family: 'Quicksand_Book'; font-size: 14px; line-height: normal; padding-bottom: 11px;}
+.countdown{display: flex; justify-content: space-between; padding-bottom: 74px;}
+.count{display: flex; justify-content: space-between; align-items: center;}
+.count h3 span{color: #fff; font-family: 'Jost400Book'; font-size: 30px; line-height: normal; padding-right: 5px;}
+.count h3{color: #b4dea4; font-family: 'Jost400Book'; font-size: 12px; line-height: normal; text-transform: uppercase; 
+}
+.tags{display: flex; justify-content: spacee-between; text-align: center;}
+.shop{ padding-right: 22px;}
+.shop a{color: #fff; font-family: 'Jost400Book'; font-size: 13px; line-height: normal; text-decoration: none;
+padding: 18px 64px; border: 2px solid #fff; border-radius: 35px; text-transform: uppercase; display: inline-block;}
+.shop a:hover{color: #98a91d; background: #fff;}
+.leaf4{position: absolute; top: 8%; left: 8%;}
+.leaf5{position: absolute; top: 34%; left: 38%;}
+.leaf6{position: absolute; top: 28%; right: 17%;}
+
+
+
+
+.latestblog_section{background: #f2f2f6; padding-top: 138px; padding-bottom: 96px; margin-top: -26px; max-width: 100%;}
+.blog_holder{ display: flex; margin: 0 -20px;}
+.blog_heading{text-align: center;}
+.blog_heading h2{color: #96ae00; font-family: 'Schoolbell'; font-size: 18px; line-height: normal; padding-bottom: 25px;}
+.blog_heading h3{color: #2d2a6e; font-family: 'Quicksand_Book'; font-size: 30px; line-height: normal; padding-bottom: 19px;}
+.blog_heading h4{color: #96ae00; font-family: 'Jost400Book'; font-size: 15px; line-height: normal; padding-bottom: 44px;}
+.blog_holder{display: flex; justify-content: space-between;}
+.blog_details{width: 25%; position: relative; margin: 0 20px;}
+.blog_pic img{border-radius: 15px 15px 0 0; display: block; width: 100%;}
+.white_box{width: 100%; background: #fff; border-radius: 0 0 15px 15px; padding: 30px 26px;} 
+.shopping_tags{padding-bottom: 20px;}
+.shopping_tags ul{}
+.shopping_tags ul li{ display: inline-block; vertical-align: top; padding-right: 9px;}
+.shopping_tags ul li a{color: #383668; font-family: 'Jost400Book'; font-size: 12px; line-height: normal; 
+text-decoration: none; text-transform: uppercase;}
+.shopping_tags ul li a:hover{color: #9fb917;}
+.shopping_tags ul li:last-child{padding-right: 61px;}
+.white_headings h2{color: #2d2a6e; font-family: 'Jost400Book'; font-size: 18px; line-height: normal; padding-bottom: 20px;}
+.white_headings p{color: #4d5574; font-family: 'Quicksand_Book'; font-size: 16px; line-height: normal; padding-bottom: 40px;}
+.continue_tag{position: relative;}
+.continue_tag a{color: #9fb917; font-family: 'Jost400Book'; font-size: 12px; line-height: normal; text-decoration: none; 
+padding-bottom: 30px; text-transform: uppercase;}
+.continue_hover {position: absolute; bottom: 6%; left: 47%; }
+.continue_tag a span{color: #9fb917; font-family: 'Jost400Book'; font-size: 12px; line-height: normal; display: none;}
+.continue_tag a:hover span{display: inline-block;}
+
+
+
+
+.footer{background: url(../images/footer_background.svg); background-repeat: no-repeat; background-position: center; background-size: cover; max-width: 100%;
+padding-top: 60px; padding-bottom: 40px; margin-top: -23px;}
+.footer_all{}
+.footer_up{padding-bottom: 44px;}
+.footer_icon_holder{display: flex; justify-content: space-between; border-bottom: 2px solid #aca9ba; text-align: center; border-width: 100%;}
+.footer_icon{width: 20%;}
+.footer_icon img{padding-bottom: 8px;}
+.footer_icon h2{color: #fff; font-family: 'Quicksand_Book'; font-size: 12px; line-height: normal; padding-bottom: 8px;}
+.footer_icon h3{color: #b0afcc; font-family: 'Jost400Book'; font-size: 14px; line-height: normal; padding-bottom: 48px;}
+.middle_all{/*width: 71.27%;*/ display: flex; justify-content: space-between; border-bottom: 2px solid #aca9ba; padding-bottom: 68px;}
+.lets_help{width: 33.33%;  margin: 0 34px;}
+.footer_middle{padding-bottom: 40px;}
+.help_heading h2{color: #fff; font-family: 'Quicksand_Book'; font-size: 14px; line-height: normal; padding-bottom: 27px;}
+.help_heading h3{color: #b0afcc; font-family: 'Jost400Book'; font-size: 16px; line-height: normal; padding-bottom: 44px;}
+.help_heading h3 a{color: #96ae00; font-family: 'Jost400Book'; font-size: 16px; line-height: normal; text-decoration: none;}
+.help_heading h4{color: #b0afcc; font-family: 'Jost400Book'; font-size: 16px; line-height: normal; text-decoration: none;}
+.help_heading h4 span{color: #fff; font-family: 'Jost400Book'; font-size: 16px; line-height: normal; text-decoration: none;}
+.social_signs li{list-style: none; margin-right: 7px; display: inline-block;}
+.social_signs li a{text-decoration: none;}
+.social_signs li:last-child{margin-right: 0px;}
+.social_signs h2{color: #b0afcc; font-family: 'Jost400Book'; font-size: 16px; line-height: normal; padding-bottom: 9px;}
+.help_heading ul{}
+.help_heading ul li{list-style: none; padding-bottom: 11px;}
+.help_heading ul li a{color: #b0afcc; font-family: 'Jost400Book'; font-size: 16px; line-height: normal; text-decoration: none;}
+.help_heading ul li a:hover{color: #fff;}
+.help_heading ul li:last-child{padding-bottom: 0px;}
+
+.newsletter{width: 56.06%;  border-left: 2px solid #aca9ba; border-width: 100%;}
+.news_heading{padding-left: 90px;}
+.news_heading h2{color: #fff; font-family: 'Quicksand_Book'; font-size: 14px; line-height: normal; padding-bottom: 31px;}
+.news_heading h3{color: #fff; font-family: 'Jost400Book'; font-size: 16px; line-height: normal; padding-bottom: 20px;}
+.email{border-radius: 3px; height: 50px; width: 100%; background: #fff; border: none; padding: 9px 155px 9px 32px; outline: none;}
+.submit{font-size: 13px; line-height: normal; color: #fff; text-transform: uppercase; padding: 14px 30px; background: #96ae00;
+    border-radius: 3px; position: absolute; top: 4px; right: 4px; border: none; cursor: pointer;}
+.chklabel{color: #fff; font-family: 'Jost400Book'; font-size: 16px; line-height: normal; padding-top: 20px; display: inline-block;}
+.image{position: absolute; top: 19px; left: 10px;}
+.copyright h2{color: #b0afcc; font-family: 'Jost400Book'; font-size: 16px; line-height: normal; padding-left: 10px;}
+.copyright h2 span{color: #96ae00; font-family: 'Jost400Book'; font-size: 16px; line-height: normal;}
+.checkbox{display: inline-block;}
+.Payment_icons li{list-style: none;  margin-right: 5px; display: inline-block;}
+.Payment_icons li a{text-decoration: none;}
+.Payment_icons li:last-child{margin-right: 0px;}
+.email_box{position: relative;}
+
+
+
+
+.banner{background: #fff; width: 100%; padding-top: 137px; padding-bottom: 134px; position: relative;}
+.inside_banner{display: flex; justify-content: space-between; }
+.inner_banner_details{text-align: left; width: 50%;}
+.inner_banner_details h2{color: #96ae00; font-family: 'Jost400Book'; font-size: 16px; line-height: normal; padding-bottom: 32px; text-transform: uppercase;}
+.inner_banner_details h3{color: #2d2a6e; font-family: 'Quicksand_Bold'; font-size: 65px; line-height: normal; padding-bottom: 30px; 
+text-transform: capitalize;}
+.inner_banner_details p{color: #4d5574; font-family: 'Jost400Book'; font-size: 18px; line-height: normal; padding-bottom: 53px;}
+.inner_banner_details a{color: #fff; background: #96ae00; font-family: 'Jost400Book'; font-size: 13px; line-height: normal; padding: 16px 50px;
+text-decoration: none; text-transform: uppercase; border-radius: 35px;}
+.inner_banner_details a:hover{background: #2d2a6e;}
+.leaf7{position: absolute; bottom: 23%; left: 30%;}
+.leaf8{position: absolute; top: 18%; left: 49%;}
+.leaf9{position: absolute; top: 6%; right: 6%;}
+.leaf10{position: absolute; top: 71%; left: 61%;}
+.inner_banner_pic img{max-width: 100%;}
+
+
+
+
+
+@media only screen and (max-width:1599px){
+
+  .inside_banner{padding: 0 50px;}
+  .inner_banner_pic {width: 100%;}
+   .box_holder, .product_holder, .blog_holder, .banner_holder{margin: 0px;}
+  /*.box_holder,*/ .product_holder, .banner_holder, .blog_holder, .up_all, {padding: 0 20px;}
+  .product_section, .bottle_all,  .food_offers, .heder_up{padding-left: 20px; padding-right: 20px;}
+  .add_banner{padding-top: 36px;}
+  .news_heading{padding: 0 40px;}
+  .chklabel{display: inline;}
+  .bottom_all{padding: 0 20px;}
+  .leaf3{right: 19%;}
+  .bottle_pic, .bottle_details{width: 50%;}
+  .header_bottom{width: 100%;}
+}
+
+@media only screen and (max-width:1299px){
+            .green_banner{padding-left:40px; padding-top: 40px; padding-right:40px;}
+            .banner_deatils_1, .banner_deatils_3{top: 18px; left: 35px;}
+        }
+
+
+@media only screen and (max-width:1199px){
+    .inside_banner {padding: 0 20px;}
+    .inner_banner_pic {width: 100%;}
+    .bottom_all, .bottom_details, , {display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;}
+    .food_box{width: 30.33%; margin-bottom: 20px;}
+    .product_box{width: 22%; margin-bottom: 20px;}
+    .bottle_pic, .bottle_details, {width: 100%;}
+    .cart a, .cart1 a{padding: 16px 39px;}
+    .shop a{padding: 18px 34px;}
+    .blog_details{width: 40%; margin-bottom: 20px; margin-right: 46px; margin-left: 46px;}
+    .green_banner{padding: 44px 53px;}
+    .banner_headings_2{padding-bottom: 10px;}
+    .leaf4{left: 32%;}
+    .banner_deatils_3{top: 11px; left: 35px;}
+    .banner_deatils_2{top: 20px;}
+    .middle_all, .blog_holder, .box_holder, .product_holder{flex-wrap: wrap; justify-content: center;}
+    .lets_help{width: 26.33%;}
+    .newsletter{border: none; padding-top: 47px;}
+}
+
+  @media only screen and (max-width:991px){
+    .leaf10{position: absolute; top: 71%; left: 51%;}
+    .menu_all{padding-top: 20px;}
+    /*.banner_deatils_1{padding-bottom: 6px;}*/
+    .banner_deatils_1 a, .banner_deatils_3 a, .banner_deatils_2 a{font-size: 14px;}
+    .banner_deatils_3{padding-bottom: 14px;}
+    .shop a{padding: 10px 14px;}
+    .up_all, .blog_holder, .footer_icon_holder, .bottom_all{flex-wrap: wrap; justify-content: center;}
+    .middle_all{flex-wrap: wrap; justify-content: center; justify-content: space-between;}
+    .blog_details{width: 38%; margin-right: 15px; margin-left: 15px;}
+    .footer_up{padding-left: 15px; padding-right: 15px;}
+    .footer_icon, .lets_help{width: 34%;}
+    .inner_banner_details{padding-left: 20px;}
+    .newsletter, .lets_help{padding-top: 26px;}
+    .copyright{padding-bottom: 13px;}
+    .leaf7{left: 37%;}
+    .leaf3{right: 5%;}
+  }
+
+
+  @media only screen and (max-width:767px){
+        .leaf10{top: 83%; left: 32%;}
+        .leaf7{left: 48%;}
+        .food_box{width: 37.33%;}
+        .product_box{width: 29%;}
+        .cart a, .cart1 a{padding: 14px 20px;}
+        .banner_deatils_1 a, .banner_deatils_3 a, .banner_deatils_2 a{font-size: 12px;}
+        .banner_headings_1, .banner_headings_2, .banner_headings_3{padding-bottom: 0;}
+        .banner_deatils_1{top: 9px; left: 24px;}
+        .banner_deatils_2{top: 15px; left: 24px;}
+        .banner_deatils_3{top: 9px; left: 24px; padding-bottom: 0px;}
+        .shop a{padding: 10px 44px; font-size: 9px;}
+        .blog_details{width: 45%;}
+        .lets_help{width: 39%; padding-bottom: 20px;}
+        .middle_all{ justify-content: center;}
+        .newsletter{width: 70%; }
+        .news_heading{justify-content: center;}
+        .footer{padding-top: 85px; margin-top: -59px;}
+        .leaf2{top: -12%; left: 15%;}
+        .inside_banner{flex-wrap: wrap; justify-content: center;}
+        .inner_banner_details, .inner_banner_pic{max-width: 100%;}
+        .banner{padding-top: 94px;}
+        .inner_banner_pic{padding-top: 60px;}
+  }
+
+   @media only screen and (max-width:575px){
+    .up_heading h2{font-size: 10px;}
+    .menu ul li a{font-size: 7px;}
+    .english ul li a{font-size: 9px;}
+    .leaf1, .leaf2, .leaf3, .leaf4, .leaf5, .leaf6, .leaf7, .leaf8, .leaf9, .leaf10{display: none;}
+    .food_box{width: 61.33%;}
+    .inner_banner_details a{padding: 16px 34px;}
+    .inner_banner_details h3{font-size: 38px;}
+    .inner_banner_details{padding-left: 0px;}
+    .inner_banner_pic{padding-left: 30px;}
+    .inner_banner_pic, .inner_banner_details{justify-content: center; max-width: 100%;}
+    .product_box{width: 43%;}
+    .bottom_all, .banner_holder{flex-wrap: wrap; justify-content: center; justify-content: spcae-between;}
+    .bottle_pic, .bottle_details{width: 100%}
+    .banner_1, .banner_2, .banner_3{width: 100%; margin-bottom: 20px;}
+    .blog_details{width: 82%;}
+    .newsletter{width: 100%;}
+    .banner_deatils_1 a, .banner_deatils_3 a, .banner_deatils_2 a{font-size: 20px; padding-bottom: 14px;}
+    .green_holder{justify-content: center; width: 100%;}
+    .countdown{padding-bottom: 20px;}
+    .green_banner{padding: 44px 25px;}
+    .bottle_all{flex-wrap: wrap; padding: 0 20px; justify-content: center;}
+
+    .food_box{width: 100%;}
+    .Payment_icons {padding: 0 0px;}
+    .inside_banner{padding: 0px;}
+    .up_heading h2{font-size: 9px;}
+    .news_heading{padding: 0 15px;}
+    .email{padding: 9px 133px 9px 32px;}
+    .submit{padding: 14px 15px;}
+    .inner_banner_details {text-align: center; max-width: 100%; width: 100%; padding: 0 20px;}
+    .banner{padding-top: 40px; padding-bottom: 25px;}
+    .bottle_banner{padding-top: 0px;}
+    .bottle_details{text-align: center; padding-top: 20px;}
+    .fresh_fruits h5{padding-bottom: 21px;}
+    .add_banner{padding-top: 53px;}
+    .green_banner{padding: 44px 87px 44px 26px;}
+    .countdown {flex-wrap: wrap;}
+    .shop a {padding: 10px 21px;}
+    .footer_icon, .lets_help{width: 100%;}
+    .lets_help{text-align: center;}
+   }
+
+/* @media only screen and (max-width:380px){
+    .food_box{width: 100%;}
+    .Payment_icons {padding: 0 0px;}
+    .inside_banner{padding: 0px;}
+    .up_heading h2{font-size: 9px;}
+    .news_heading{padding: 0 15px;}
+    .email{padding: 9px 133px 9px 32px;}
+    .submit{padding: 14px 15px;}
+    .inner_banner_details {text-align: center; max-width: 100%; width: 100%; padding: 0 20px;}
+    .banner{padding-top: 40px; padding-bottom: 25px;}
+    .bottle_banner{padding-top: 0px;}
+    .bottle_details{text-align: center; padding-top: 20px;}
+    .fresh_fruits h5{padding-bottom: 21px;}
+    .add_banner{padding-top: 53px;}
+    .green_banner{padding: 44px 87px 44px 26px;}
+    .countdown {flex-wrap: wrap;}
+    .shop a {padding: 10px 21px;}
+    .footer_icon, .lets_help{width: 100%;}
+    .lets_help{text-align: center;}
+
+ }*/
+
